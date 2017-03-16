@@ -1,26 +1,33 @@
 /* create fake borders as guidelines */
 
 /* header must be fixed*/
+html {
+  padding-left: 12%;
+  padding-right: 12%;
+}
 
 header {
+  background-color: gray;
+  padding: 1%;
+  /* PLACEHOLDER */
   border-width: 3px;
   border-style: solid;
   border-color: blue;
-    /* PLACEHOLDER */
 }
 
-/* all content in-between header + footer */
-main {
-  border-width: 4px;
-  border-style: solid;
-  border-color: yellow;
-    /* PLACEHOLDER */
-
+a[href="index.html"] {
+  padding: 15px;
+  font-family: sans-serif;
+  /* PLACEHOLDER */
+  border-width: 2px;
+  border-style: dotted;
+  border-color: white;
 }
 
 .column-one {
   display: inline-block;
-  width: 49%;
+  width: 47%;
+  padding: 1%;
   vertical-align: middle;
   /* PLACEHOLDER */
   border-width: 2px;
@@ -31,7 +38,8 @@ main {
 /* navigation link is inline and to the right */
 .column-two {
   display: inline-block;
-  width: 49%;
+  width: 47%;
+  padding: 1%;
   vertical-align: middle;
   /* PLACEHOLDER */
   border-width: 2px;
@@ -39,19 +47,35 @@ main {
   border-color: black;
 }
 
-a[href="index.html"] {
-}
-
 .col2 {
 }
 
 nav {
+  text-align: right;
+  padding-right: 5%;
+  /* PLACEHOLDER */
   border-width: 3px;
   border-style: solid;
   border-color: blue;
+}
+
+nav li {
+  display: inline;
+  padding: 1%;
   /* PLACEHOLDER */
 }
 
+header a {
+  text-decoration: none;
+}
+
+/* all content in-between header + footer */
+main {
+  border-width: 4px;
+  border-style: solid;
+  border-color: yellow;
+    /* PLACEHOLDER */
+}
 #popular-section {
   border-width: 3px;
   border-style: solid;
@@ -60,29 +84,40 @@ nav {
 }
 
 #cover-section {
+  background-image: url("../assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 310px;
+  /* PLACEHOLDER */
   border-width: 3px;
   border-style: dashed;
   border-color: limegreen;
-    /* PLACEHOLDER */
-
 }
-
 
 #popular-section {
   border-width: 3px;
   border-style: dashed;
   border-color: red;
     /* PLACEHOLDER */
-
 }
 
 /* popular posts title */
 .title {
+  text-align: center;
+
   border-width: 3px;
   border-style: dashed;
   border-color: green;
     /* PLACEHOLDER */
+}
 
+.overlay {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 60px;
+  padding-top: 50px;
 }
 
 /* popular posts article previews */
@@ -91,25 +126,33 @@ nav {
   border-style: dashed;
   border-color: orange;
     /* PLACEHOLDER */
-
 }
 
 /* join the blob section w/ inline photo */
 #join-section {
+  padding: 3%;
   border-width: 3px;
   border-style: solid;
   border-color: black;
     /* PLACEHOLDER */
-
 }
 
 /* image as background with text overlay */
 #closing-section {
+  background-image: url("../assets/everybody.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 275px;
+
   border-width: 3px;
   border-style: dashed;
   border-color: purple;
     /* PLACEHOLDER */
+}
 
+img[src="assets/join_club.jpg"] {
+  width: 100%;
 }
 
 /* footer at very bottom */
@@ -117,6 +160,5 @@ footer{
   border-width: 3px;
   border-style: solid;
   border-color: blue;
-    /* PLACEHOLDER */
-
+    /* PLACEHOLDER */s
 }
