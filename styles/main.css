@@ -8,11 +8,10 @@ html {
 
 header {
   background-color: gray;
-  padding: 1%;
-  /* PLACEHOLDER */
-  border-width: 3px;
-  border-style: solid;
-  border-color: blue;
+  position: fixed;
+  top: 0;
+  left: 12%;
+  right: 12%;
 }
 
 a[href="index.html"] {
@@ -26,60 +25,51 @@ a[href="index.html"] {
 
 .column-one {
   display: inline-block;
-  width: 47%;
-  padding: 1%;
+  width: 49%;
   vertical-align: middle;
   /* PLACEHOLDER */
   border-width: 2px;
   border-style: dotted;
-  border-color: black;
+  border-color: yellow;
 }
 
 /* navigation link is inline and to the right */
 .column-two {
   display: inline-block;
-  width: 47%;
-  padding: 1%;
+  width: 49%;
   vertical-align: middle;
   /* PLACEHOLDER */
   border-width: 2px;
   border-style: dotted;
-  border-color: black;
+  border-color: yellow;
 }
 
 .col2 {
 }
 
-nav {
+a {
+  text-decoration: none;
+}
+
+header nav {
   text-align: right;
   padding-right: 5%;
   /* PLACEHOLDER */
-  border-width: 3px;
-  border-style: solid;
-  border-color: blue;
 }
 
-nav li {
+header nav li {
   display: inline;
   padding: 1%;
   /* PLACEHOLDER */
 }
 
-header a {
-  text-decoration: none;
-}
-
 /* all content in-between header + footer */
 main {
+  margin-top: 7%;
+
   border-width: 4px;
   border-style: solid;
   border-color: yellow;
-    /* PLACEHOLDER */
-}
-#popular-section {
-  border-width: 3px;
-  border-style: solid;
-  border-color: blue;
     /* PLACEHOLDER */
 }
 
@@ -96,20 +86,19 @@ main {
 }
 
 #popular-section {
-  border-width: 3px;
-  border-style: dashed;
-  border-color: red;
-    /* PLACEHOLDER */
+  text-align: center;
+  align-items: center;
+  /* PLACEHOLDER */
 }
 
 /* popular posts title */
-.title {
+#popular-title {
   text-align: center;
-
-  border-width: 3px;
-  border-style: dashed;
-  border-color: green;
-    /* PLACEHOLDER */
+  vertical-align: middle;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 .overlay {
@@ -122,10 +111,86 @@ main {
 
 /* popular posts article previews */
 .article-preview {
+  display: inline-block;
+  width: 23%;
+  height: 18rem;
+  vertical-align: top;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+
   border-width: 2px;
   border-style: dashed;
   border-color: orange;
     /* PLACEHOLDER */
+}
+
+.article-title {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+  top: 0;
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+
+  border-width: 2px;
+  border-style: dashed;
+  border-color: blue;
+}
+
+.a-sample-here {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  height: 10rem;
+  float: left;
+  border-width: 0.2rem;
+  border-style: dotted;
+  border-color: black;
+}
+
+.text-overflow {
+display: block;
+margin-left: 0.5rem;
+max-width: 400px;
+height: 10rem;
+font-size: 1rem;
+line-height: 1rem;
+margin-top: 0.5rem;
+margin-left: 1rem;
+margin-right: 1rem;
+overflow: hidden;
+text-overflow: ellipsis;
+text-align: left;
+
+
+border-width: 0.2rem;
+border-style: dotted;
+border-color: black;
+}
+
+.textend {
+  position: relative;
+  float: right;
+  border-width: 1px;
+  border-style: dotted;
+  border-color: red;
+
+}
+
+.button {
+  padding: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0.5rem;
 }
 
 /* join the blob section w/ inline photo */
@@ -156,9 +221,31 @@ img[src="assets/join_club.jpg"] {
 }
 
 /* footer at very bottom */
-footer{
-  border-width: 3px;
+footer {
+  background-color: gray;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: black;
+}
+
+#footer-left {
+  display: inline-block;
+  width: 48%;
+  vertical-align: middle;
+  font-size: 0.5rem;
+
+
+  border-width: 1px;
   border-style: solid;
   border-color: blue;
-    /* PLACEHOLDER */s
+}
+
+#footer-right {
+  display: inline-block;
+  width: 48%;
+  vertical-align: middle;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: blue;
 }
