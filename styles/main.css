@@ -1,0 +1,105 @@
+/* create fake borders as guidelines */
+
+/* header must be fixed*/
+
+header {
+  border-width: 3px;
+  border-style: solid;
+  border-color: blue;
+    /* PLACEHOLDER */
+}
+
+/* all content in-between header + footer */
+main {
+  border-width: 4px;
+  border-style: solid;
+  border-color: yellow;
+    /* PLACEHOLDER */
+
+}
+
+.column-one {
+  border-width: 2px;
+  border-style: dotted;
+  border-color: black;
+    /* PLACEHOLDER */
+
+}
+
+/* navigation link is inline and to the right */
+.column-two {
+  border-width: 2px;
+  border-style: dotted;
+  border-color: black;
+    /* PLACEHOLDER */
+
+}
+
+#popular-section {
+  border-width: 3px;
+  border-style: solid;
+  border-color: blue;
+    /* PLACEHOLDER */
+}
+
+#cover-section {
+  border-width: 3px;
+  border-style: dashed;
+  border-color: limegreen;
+    /* PLACEHOLDER */
+
+}
+
+
+#popular-section {
+  border-width: 3px;
+  border-style: dashed;
+  border-color: red;
+    /* PLACEHOLDER */
+
+}
+
+/* popular posts title */
+.title {
+  border-width: 3px;
+  border-style: dashed;
+  border-color: green;
+    /* PLACEHOLDER */
+
+}
+
+/* popular posts article previews */
+.article-preview {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: orange;
+    /* PLACEHOLDER */
+
+}
+
+/* join the blob section w/ inline photo */
+#join-section {
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+    /* PLACEHOLDER */
+
+}
+
+/* image as background with text overlay */
+#closing-section {
+  border-width: 3px;
+  border-style: dashed;
+  border-color: purple;
+    /* PLACEHOLDER */
+
+}
+
+/* footer at very bottom */
+footer{
+  border-width: 3px;
+  border-style: solid;
+  border-color: blue;
+    /* PLACEHOLDER */
+
+}
