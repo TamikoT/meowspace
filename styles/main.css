@@ -19,20 +19,37 @@ main {
 }
 
 .column-one {
+  display: inline-block;
+  width: 49%;
+  vertical-align: middle;
+  /* PLACEHOLDER */
   border-width: 2px;
   border-style: dotted;
   border-color: black;
-    /* PLACEHOLDER */
-
 }
 
 /* navigation link is inline and to the right */
 .column-two {
+  display: inline-block;
+  width: 49%;
+  vertical-align: middle;
+  /* PLACEHOLDER */
   border-width: 2px;
   border-style: dotted;
   border-color: black;
-    /* PLACEHOLDER */
+}
 
+a[href="index.html"] {
+}
+
+.col2 {
+}
+
+nav {
+  border-width: 3px;
+  border-style: solid;
+  border-color: blue;
+  /* PLACEHOLDER */
 }
 
 #popular-section {
