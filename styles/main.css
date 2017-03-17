@@ -1,46 +1,58 @@
 /*
+1. figure out how to get ellipsis in post blurbs
+2. format 'join' text
+3. resize photo for 'join'
+4. format footer text--in new div container
+5. review guidelines in the prompt
+6. refactor code
 
-1. update links post tiles
-2. figure out how to get ellipsis in post blurbs
-3. format 'join' text
-4. resize photo for 'join'
-5. format footer text--in new div container
-6. review guidelines in the prompt
-7. refactor code
+least once:
+  - Inline Block display
+  - Floats
+  - Fixed Positioning (With the top header)
+- Add custom styling
+  - At least one google font
+  - At least one pseudo selector (like hover)
+  - Background color on one section
+-  Identify repeated styles and use CSS selectors and class/id names to organize and DRY your code.
 
+COLORS:
+orange - f55d3e
+gray - 878e88
+yellow - f7cb15
+white - ffffff
+blue - 76bed0
  */
 
 /* header must be fixed*/
 html {
   padding-left: 12%;
   padding-right: 12%;
+  background-color: #878e88;
 }
 
 header {
-  background-color: gray;
+  background-color: #f55d3e;
   position: fixed;
+  height: 5rem;
   top: 0;
   left: 12%;
   right: 12%;
+
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: black;
 }
 
 a[href="index.html"] {
   padding: 15px;
   font-family: sans-serif;
-  /* PLACEHOLDER */
-  border-width: 2px;
-  border-style: dotted;
-  border-color: white;
 }
 
 .column-one {
   display: inline-block;
   width: 49%;
   vertical-align: middle;
-  /* PLACEHOLDER */
-  border-width: 2px;
-  border-style: dotted;
-  border-color: yellow;
 }
 
 /* navigation link is inline and to the right */
@@ -48,10 +60,6 @@ a[href="index.html"] {
   display: inline-block;
   width: 49%;
   vertical-align: middle;
-  /* PLACEHOLDER */
-  border-width: 2px;
-  border-style: dotted;
-  border-color: yellow;
 }
 
 .col2 {
@@ -59,6 +67,18 @@ a[href="index.html"] {
 
 a {
   text-decoration: none;
+  padding-left: 1.5rem;
+}
+
+a:hover {
+  font-weight: 900;
+  background-image: url("../assets/paw-print-icon.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+a:visited {
+  color: black;
 }
 
 header nav {
@@ -75,11 +95,8 @@ header nav li {
 
 /* all content in-between header + footer */
 main {
-  margin-top: 7%;
-
-  border-width: 4px;
-  border-style: solid;
-  border-color: yellow;
+  margin-top: 5rem;
+  background-color: #ffffff;
     /* PLACEHOLDER */
 }
 
@@ -89,23 +106,22 @@ main {
   background-position: center;
   width: 100%;
   height: 310px;
-  /* PLACEHOLDER */
-  border-width: 3px;
-  border-style: dashed;
-  border-color: limegreen;
 }
 
 #popular-section {
   text-align: center;
-  align-items: center;
-  /* PLACEHOLDER */
+  border-style: solid;
+  border-color: black;
+  border-width: 0.2rem;
+  align-content: center;
+  padding-left: 2rem;
 }
 
 /* popular posts title */
 #popular-title {
   text-align: center;
   vertical-align: middle;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 2.5rem;
   margin: 0;
@@ -114,73 +130,56 @@ main {
 .overlay {
   text-align: center;
   color: white;
-  text-transform: uppercase;
-  font-size: 60px;
-  padding-top: 50px;
+  font-size: 4rem;
+  padding-top: 5rem;
 }
 
 /* popular posts article previews */
 .article-preview {
   display: inline-block;
   width: 23%;
-  height: 18rem;
+  height: 16rem;
   vertical-align: top;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 1.5rem;
 
-  border-width: 2px;
-  border-style: dashed;
-  border-color: orange;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: black;
+  border-radius: 1.25rem;
     /* PLACEHOLDER */
 }
 
+.title-box {
+  overflow: hidden;
+}
+
 .article-title {
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
   margin: 0;
   top: 0;
   height: 3rem;
   width: 100%;
   text-align: center;
-
-  border-width: 2px;
-  border-style: dashed;
-  border-color: blue;
-}
-
-.a-sample-here {
-  position: relative;
-  text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-  height: 10rem;
-  float: left;
-  border-width: 0.2rem;
-  border-style: dotted;
-  border-color: black;
+  background-color: #76bed0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .text-overflow {
 display: block;
 margin-left: 0.5rem;
 max-width: 400px;
-height: 10rem;
+height: 9rem;
 font-size: 1rem;
 line-height: 1rem;
 margin-top: 0.5rem;
 margin-left: 1rem;
 margin-right: 1rem;
-overflow: hidden;
+overflow: scroll;
 text-overflow: ellipsis;
 text-align: left;
 
-
-border-width: 0.2rem;
-border-style: dotted;
-border-color: black;
 }
 
 .textend {
@@ -193,21 +192,23 @@ border-color: black;
 }
 
 .button {
-  padding: 0.5rem;
+  padding: 0.75rem;
+  background-color: #f7cb15;
   text-decoration: none;
   text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 1rem;
 
-  border-width: 0.2rem;
-  border-style: solid;
-  border-color: black;
-  border-radius: 0.5rem;
 }
 
 /* join the blob section w/ inline photo */
 #join-section {
+  background-color: #f7cb15;
   padding: 3%;
   border-width: 3px;
-  border-style: solid;
+  border-style: solids;
   border-color: black;
     /* PLACEHOLDER */
 }
@@ -219,12 +220,10 @@ border-color: black;
   background-position: center;
   width: 100%;
   height: 275px;
-
-  border-width: 3px;
-  border-style: dashed;
-  border-color: purple;
-    /* PLACEHOLDER */
+  margin: 0;
+  overflow: hidden;
 }
+
 
 img[src="assets/join_club.jpg"] {
   width: 100%;
@@ -232,7 +231,7 @@ img[src="assets/join_club.jpg"] {
 
 /* footer at very bottom */
 footer {
-  background-color: gray;
+  background-color: #76bed0;
   border-width: 0.2rem;
   border-style: solid;
   border-color: black;
@@ -240,22 +239,21 @@ footer {
 
 #footer-left {
   display: inline-block;
-  width: 48%;
+  width: 50%;
   vertical-align: middle;
   font-size: 0.5rem;
+  float: left;
 
+}
 
-  border-width: 1px;
-  border-style: solid;
-  border-color: blue;
+h4, #disclaimer {
+  display: inline;
+  text-indent: 0
 }
 
 #footer-right {
   display: inline-block;
-  width: 48%;
+  width: 50%;
   vertical-align: middle;
 
-  border-width: 1px;
-  border-style: solid;
-  border-color: blue;
 }
