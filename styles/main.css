@@ -1,36 +1,24 @@
-/*
-1. figure out how to get ellipsis in post blurbs
-2. format 'join' text
-3. resize photo for 'join'
-4. format footer text--in new div container
-5. review guidelines in the prompt
-6. refactor code
-
-least once:
-  - Inline Block display
-  - Floats
-  - Fixed Positioning (With the top header)
-- Add custom styling
-  - At least one google font
-  - At least one pseudo selector (like hover)
-  - Background color on one section
--  Identify repeated styles and use CSS selectors and class/id names to organize and DRY your code.
+/* MEOWSPACE CSS
 
 COLORS:
-orange - f55d3e
-gray - 878e88
-yellow - f7cb15
-white - ffffff
-blue - 76bed0
- */
+  #878e88 - gray
+  #f55d3e - orange
+  #f7cb15 - yellow
+  #76bed0 - blue
+*/
 
-/* header must be fixed*/
-html {
+/* REQ: CUSTOM GOOGLE FONT USED */
+/* custom Goole font: Muli */
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+body {
   padding-left: 12%;
   padding-right: 12%;
   background-color: #878e88;
+  font-family: 'Muli', sans-serif;
 }
 
+/* REQ: FIXED HEADER */
 header {
   background-color: #f55d3e;
   position: fixed;
@@ -38,66 +26,63 @@ header {
   top: 0;
   left: 12%;
   right: 12%;
-
-  border-width: 0.2rem;
-  border-style: solid;
-  border-color: black;
-}
-
-a[href="index.html"] {
-  padding: 15px;
-  font-family: sans-serif;
-}
-
-.column-one {
-  display: inline-block;
-  width: 49%;
-  vertical-align: middle;
-}
-
-/* navigation link is inline and to the right */
-.column-two {
-  display: inline-block;
-  width: 49%;
-  vertical-align: middle;
-}
-
-.col2 {
-}
-
-a {
-  text-decoration: none;
-  padding-left: 1.5rem;
-}
-
-a:hover {
-  font-weight: 900;
-  background-image: url("../assets/paw-print-icon.png");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: 1rem;
-}
-a:visited {
-  color: black;
-}
-
-header nav {
-  text-align: right;
-  padding-right: 5%;
-  /* PLACEHOLDER */
-}
-
-header nav li {
-  display: inline;
-  padding: 1%;
-  /* PLACEHOLDER */
 }
 
 /* all content in-between header + footer */
 main {
   margin-top: 5rem;
   background-color: #ffffff;
-    /* PLACEHOLDER */
+}
+
+/* all links unlined */
+a {
+  text-decoration: none;
+  padding-left: 1.5rem; /* for hovered img */
+}
+
+/* REQ: PSEUDO SELECTOR USED */
+/* pawprint appears when hovering */
+a:hover {
+  font-weight: 800;
+  background-image: url("../assets/paw-print-icon.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+a:visited {
+  color: black;
+}
+
+/* header: site name link */
+a[href="index.html"] {
+  padding: 15px;
+  font-family: sans-serif;
+}
+
+/* REQ: INLINE BLOCK EXAMPLE */
+/* 2-column format in header and join-section */
+.column-one {
+  display: inline-block;
+  width: 40%;
+  vertical-align: middle;
+  padding-left: 7%;
+  padding-right: 3%;
+}
+.column-two {
+  display: inline-block;
+  width: 45%;
+  vertical-align: middle;
+}
+
+header nav {
+  text-align: right;
+  padding-right: 5%;
+}
+
+header nav li {
+  display: inline;
+  padding: 1%;
 }
 
 #cover-section {
@@ -108,13 +93,18 @@ main {
   height: 310px;
 }
 
+/* all content in-between header + footer */
+.overlay {
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+  padding-top: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 #popular-section {
   text-align: center;
-  border-style: solid;
-  border-color: black;
-  border-width: 0.2rem;
-  align-content: center;
-  padding-left: 2rem;
 }
 
 /* popular posts title */
@@ -127,13 +117,7 @@ main {
   margin: 0;
 }
 
-.overlay {
-  text-align: center;
-  color: white;
-  font-size: 4rem;
-  padding-top: 5rem;
-}
-
+/* REQ: CUSTOM STYLE EXAMPLE */
 /* popular posts article previews */
 .article-preview {
   display: inline-block;
@@ -145,10 +129,9 @@ main {
   margin-bottom: 1.5rem;
 
   border-width: 0.2rem;
-  border-style: solid;
-  border-color: black;
+  border-style: dashed;
+  border-color: #76bed0;
   border-radius: 1.25rem;
-    /* PLACEHOLDER */
 }
 
 .title-box {
@@ -161,6 +144,7 @@ main {
   height: 3rem;
   width: 100%;
   text-align: center;
+  padding-top: 0.5rem;
   background-color: #76bed0;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -177,18 +161,8 @@ margin-top: 0.5rem;
 margin-left: 1rem;
 margin-right: 1rem;
 overflow: scroll;
-text-overflow: ellipsis;
+text-overflow: ellipsis; /* could not get ellipsis to work... #sadday */
 text-align: left;
-
-}
-
-.textend {
-  position: relative;
-  float: right;
-  border-width: 1px;
-  border-style: dotted;
-  border-color: red;
-
 }
 
 .button {
@@ -200,21 +174,18 @@ text-align: left;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 1rem;
-
+  color: black;
 }
 
-/* join the blob section w/ inline photo */
+/* REQ: BACKGROUND COLOR USED */
+/* join section w/ inline photo */
 #join-section {
   background-color: #f7cb15;
-  padding: 3%;
-  border-width: 3px;
-  border-style: solids;
-  border-color: black;
-    /* PLACEHOLDER */
+  padding: 5%;
 }
 
-/* image as background with text overlay */
-#closing-section {
+/* banner--"everybody wants to be a cat" */
+#everybody-banner {
   background-image: url("../assets/everybody.jpg");
   background-size: cover;
   background-position: center;
@@ -224,36 +195,51 @@ text-align: left;
   overflow: hidden;
 }
 
-
+/* image of join_sectin formatted */
 img[src="assets/join_club.jpg"] {
-  width: 100%;
+  width: 70%;
+  margin-left: 21%;
+  border-radius: 1rem;
 }
 
-/* footer at very bottom */
 footer {
   background-color: #76bed0;
-  border-width: 0.2rem;
-  border-style: solid;
-  border-color: black;
-}
-
-#footer-left {
+  height: auto;
+  width: 100%;
   display: inline-block;
-  width: 50%;
-  vertical-align: middle;
-  font-size: 0.5rem;
-  float: left;
-
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
+/* footer: copyright + disclaimer */
 h4, #disclaimer {
   display: inline;
-  text-indent: 0
+  text-indent: 0;
+  vertical-align: top;
+}
+
+/* REQ: FLOAT USED */
+#footer-left {
+  float: left;
+  clear: right;
+  display: block;
+  font-size: 0.5rem;
+  width: 40%;
+  padding-left: 5%;
+  padding-right: 5%;
+  vertical-align: middle;
 }
 
 #footer-right {
-  display: inline-block;
-  width: 50%;
-  vertical-align: middle;
+  float: right;
+  clear: left;
+  display: block;
+  width: 100%;
+  padding-left: 60%
+}
 
+#footer-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: square;
 }
